@@ -1,0 +1,140 @@
+.table{
+    text-align: center;
+
+
+
+      .elMarketCap, .elVolume,.el1m,.el6m, .el1y,.elPrix,.el1h,.el1j,.el1s,.elATH{
+                margin: 10px;
+                border-radius: 10px;
+                &:hover{
+                    background-color: $color1;
+                }
+
+            }
+
+        .elMarketCap, .elVolume,.el1y{
+                 @media screen and (max-width: 850px) {
+                display: none
+                }
+
+            }
+            .el1m,.el6m{
+                 @media screen and (max-width: 715px) {
+                 display: none
+                 }
+            }
+    .top{
+        display: grid;
+        grid-template-columns: 308px 100px 100px 120px repeat(7, 1fr);
+
+        @media screen and (max-width: 1020px) {
+        grid-template-columns: 276px 80px 80px 100px repeat(7, 1fr);
+        }
+        @media screen and (max-width: 850px) {
+        grid-template-columns: 276px 80px 80px 100px repeat(4, 1fr);
+        }
+        @media screen and (max-width: 715px) {
+        grid-template-columns: 220px 80px repeat(4, 1fr);
+        }
+        @media screen and (max-width: 540px) {
+        grid-template-columns: 170px 80px repeat(4, 1fr);
+        }
+
+
+           
+        
+
+
+        .trier{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                
+                p{
+                    
+                    display: inline;
+                    input{
+                        width: 50px;
+                        height: 20px;
+                        background-color: $black1;
+                        border: 1px solid $black1;
+                        box-shadow: 0px 2px $color1;
+                        color : white !important;
+                    }
+                }
+         input[type="range"] {
+            appearance: none;
+            width: 180px;
+            background: linear-gradient(90deg, $color1, #0debc6);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 50px;
+            height: 6px;
+            transform: translate(6px, 1px);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            @media screen and (max-width: 1150px) {
+            width: 50%;
+            }
+        }
+            input[type="range"]::-webkit-slider-runnable-track {
+            appearance: none;
+            height: 10px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            appearance: none;
+            width: 6px;
+            height: 14px;
+            transform: translateY(-2px);
+            background: $white1;
+            border-radius: 150px;
+            cursor: grab;
+            transition: 0.15s;
+        }
+        input[type="range"]::-webkit-slider-thumb:active {
+            cursor: grabbing;
+            transform: scale(2);
+        }
+
+
+
+
+            }
+        }
+
+
+        .infos{
+            text-align: center;
+            font-size: 0.8rem;
+            height: 15px;
+            border-bottom: 1px solid $black1;
+            .elMarketCap, .elVolume,.el1m,.el6m, .el1y,.elPrix,.el1h,.el1j,.el1s,.elATH{
+                margin: 0px 10px;
+                height: 100%;
+                  &:hover{
+                background-color: $black2;
+            }
+            }
+
+            &:hover{
+                background-color: $black1;
+            }
+
+            .trier{
+                justify-content: flex-start;
+
+                    p{
+                        margin-left: 10px;
+                       
+                        img{
+                        width: 15px;
+                        height: 15px;
+                    }
+                    }
+                    
+            }
+        }
+
+
+}
